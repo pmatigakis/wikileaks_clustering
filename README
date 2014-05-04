@@ -1,0 +1,10 @@
+This a simple script that can be used to cluster the Wikileak's cables.
+
+requirements
+============
+numpy
+scipy
+psycopg2
+sqlalchemy
+scikit-learn
+jinja2
