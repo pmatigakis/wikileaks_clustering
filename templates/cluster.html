@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ cluster }} - {{ subject }}</h1>
+
+<table class="pure-table pure-table-striped">
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Classification</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for subject, link_to, classification, created_at in cluster_data %}
+    <tr>
+      <td><a href="{{ link_to }}">{{ subject }}</a></td>
+      <td>{{ classification }}</td>
+      <td>{{ created_at.strftime("%Y/%m/%d") }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
